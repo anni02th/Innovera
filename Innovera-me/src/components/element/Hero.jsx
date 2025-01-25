@@ -14,6 +14,14 @@ const Hero = () => {
           their <span className="text-indigo-400 font-semibold">skills</span> and create impactful{" "}
           <span className="text-teal-400 font-semibold">solutions</span>.
         </p>
+
+        <div className="absolute top-0 left-0 opacity-50 z-0">
+          <img src="white-r-bg.png" alt="" />
+        </div>
+        <div className="absolute top-0 right-0 opacity-50 z-0">
+          <img src="white-l-bg.png" alt="" />
+        </div>
+
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
           <button className="bg-white text-black font-medium px-6 py-2 rounded-full border border-white hover:text-white transition hover:bg-black">
             Register

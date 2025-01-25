@@ -27,7 +27,7 @@ const About = () => {
   }, [rotation])
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4" style={{ backgroundImage: "url('/bg-img.png')" }}>
       <div
         ref={cardRef}
         className="max-w-4xl w-full bg-gradient-to-br from-purple-600 to-orange-500 p-0.5 rounded-xl overflow-hidden transition-all duration-200 ease-out cursor-pointer"
