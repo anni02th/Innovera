@@ -15,10 +15,10 @@ const Hero = () => {
           <span className="text-teal-400 font-semibold">solutions</span>.
         </p>
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <button className="bg-white text-black font-medium px-6 py-2 rounded-xl border border-white hover:bg-gray-300 transition hover:scale-105">
+          <button className="bg-white text-black font-medium px-6 py-2 rounded-full border border-white hover:text-white transition hover:bg-black">
             Register
           </button>
-          <button className="bg-black border border-white text-white font-medium px-6 py-2 rounded-lg hover:bg-zinc-900 transition hover:scale-105">
+          <button className="bg-black border border-white text-white font-medium px-6 py-2 rounded-full hover:bg-zinc-900 transition hover:scale-105">
             Details
           </button>
         </div>
