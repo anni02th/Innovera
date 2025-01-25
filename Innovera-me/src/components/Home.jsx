@@ -12,8 +12,8 @@ const Home = () => {
       <Hero/>
       <ThemeCard/>
       <AboutInnovEra/>
-      <About/>
       <Rules/>
+      <About/>
       <Timeline/>
     </div>
   )

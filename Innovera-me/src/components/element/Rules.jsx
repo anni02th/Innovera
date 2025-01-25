@@ -31,7 +31,7 @@ const Rules = () => {
   return (
     <div className="min-h-screen bg-black text-white py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">Rules and Regulations</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-orange-500">RULES AND REGULATIONS</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RuleCard
             title="Selection Process"
