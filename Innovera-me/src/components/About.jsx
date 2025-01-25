@@ -1,83 +1,93 @@
-import React, { useState, useRef, useEffect } from "react"
+import React from "react";
 
-const About = () => {
-  const [rotation, setRotation] = useState({ x: 0, y: 0 })
-  const cardRef = useRef(null)
-
-  const handleMouseMove = (e) => {
-    if (!cardRef.current) return
-    const card = cardRef.current
-    const box = card.getBoundingClientRect()
-    const centerX = box.left + box.width / 2
-    const centerY = box.top + box.height / 2
-    const rotateY = -(e.clientX - centerX) / 20
-    const rotateX = (e.clientY - centerY) / 20
-    setRotation({ x: rotateX, y: rotateY })
-  }
-
-  const handleMouseLeave = () => {
-    setRotation({ x: 0, y: 0 })
-  }
-
-  useEffect(() => {
-    const card = cardRef.current
-    if (card) {
-      card.style.transform = `perspective(1000px) rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)`
-    }
-  }, [rotation])
+const AboutInnovEra = () => {
+  const data = [
+    {
+      title: "WHAT is Techathon?",
+      description:
+        "Techathon is a dynamic hackathon designed to bring together innovative minds to solve real-world challenges. It’s a platform for tech enthusiasts, developers, and creators to showcase their skills and create impactful solutions.",
+      gradient: "bg-gradient-to-r from-orange-300 to-orange-400",
+      img: "/fire-card.png",
+    },
+    {
+      title: "WHO can participate in Techathon?",
+      description:
+        "Techathon is open to everyone—students, professionals, and tech enthusiasts alike! Whether you want to participate individually or collaborate as a team, this event is your chance to innovate, learn, and connect with like-minded individuals.",
+      gradient: "bg-gradient-to-r from-green-300 to-green-400",
+      img: "/ground-card.png",
+    },
+    {
+      title: "WHAT are themes of Techathon?",
+      description:
+        `Participants can explore diverse themes, such as:
+Artificial Intelligence and Machine Learning 
+Blockchain and Web3
+Internet of Things (IoT)
+Sustainability and Green Tech
+Open Innovation (Your own ideas!)`,
+      gradient: "bg-gradient-to-r from-blue-300 to-blue-400",
+      img: "/wind-card.png",
+    },
+    {
+      title: "WHY to participate?",
+      description:
+        `Skill Development
+Networking
+Challenge
+Creativity
+Prizes
+Resume Building
+Fun and Collaboration`,
+      gradient: "bg-gradient-to-r from-purple-300 to-purple-400",
+      img: "/space-card.png",
+      button: true,
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-black text-white flex items-center justify-center p-4" style={{ backgroundImage: "url('/bg-img.png')" }}>
-      <div
-        ref={cardRef}
-        className="max-w-4xl w-full bg-gradient-to-br from-purple-600 to-orange-500 p-0.5 rounded-xl overflow-hidden transition-all duration-200 ease-out cursor-pointer"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className="bg-black rounded-xl p-8">
-          <h2 className="text-4xl font-bold mb-8 text-center text-orange-500">About Tech-a-thon</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-bold mb-2 text-xl text-purple-400">1. What is Techathon?</h3>
-                <p className="text-gray-300">
-                  Techathon is a dynamic hackathon designed to bring together innovative minds to solve real-world
-                  challenges. It's a platform for tech enthusiasts, developers, and creators to showcase their skills
-                  and create impactful solutions.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold mb-2 text-xl text-purple-400">2. Who can participate in Techathon?</h3>
-                <p className="text-gray-300">
-                  Techathon is open to all! Whether you're a student, professional, or tech enthusiast, you're welcome
-                  to participate individually or as part of a team.
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold mb-2 text-xl text-purple-400">3. What are the themes for Techathon?</h3>
-                <p className="text-gray-300">Participants can explore diverse themes, such as:</p>
-                <ul className="list-disc pl-5 mt-2 text-gray-300">
-                  <li>Artificial Intelligence and Machine Learning</li>
-                  <li>Blockchain and Web3</li>
-                  <li>Internet of Things (IoT)</li>
-                  <li>Sustainability and Green Tech</li>
-                  <li>Open Innovation (Your own ideas!)</li>
-                </ul>
-              </div>
-            </div>
-            <div className="flex justify-center">
+    <div
+      className="bg-black py-16 px-8 min-h-screen bg-cover bg-center flex flex-col items-center"
+      style={{ backgroundImage: "url('/bg-img.png')" }}
+    >
+      <h2 className="text-center text-white text-3xl sm:text-5xl font-bold mb-14">
+        ABOUT INNOV-ERA
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className={`relative p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:shadow-white ${item.gradient} text-black ${index % 2 === 0
+              ? "sm:-rotate-6 hover:rotate-0"
+              : "sm:rotate-6 hover:rotate-0"
+              }`}
+          >
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center">
+              {item.title}
+            </h3>
+            <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-center bg-no-repeat bg-contain">
               <img
-                src="/abtimage.png"
-                alt="Techathon Illustration"
-                className="w-full max-w-md h-auto rounded-lg"
+                src={item.img}
+                alt={item.title}
+                className="w-auto"
               />
             </div>
+            <p className=" text-zinc-800 text-base sm:text-lg font-normal leading-relaxed mb-4">
+              {item.description}
+            </p>
+            {item.button && (
+              <div className="text-center z-10">
+                <a href="#">
+                <button className="bg-white mt-12 text-black font-medium border px-5 py-2 rounded-3xl hover:bg-gray-200 transition">
+                  Register
+                </button>
+                </a>
+              </div>
+            )}
           </div>
-        </div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default About
-
+export default AboutInnovEra;
