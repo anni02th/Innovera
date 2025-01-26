@@ -33,7 +33,8 @@ const RuleCard = ({ title, content, theme }) => {
       className={`rounded-[2rem] overflow-hidden transition-all duration-300 ease-out cursor-pointer border-4`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      style={styles}>
+      style={styles}
+    >
       <div className="bg-black flex m-0 p-0 rounded-xl h-full -left-1 relative">
         <img src={images[theme]} alt={`${theme} Fire`} className="relative" />
         <div className="my-2">
@@ -50,56 +51,43 @@ const Rules = () => {
     <div
       className="min-h-screen bg-black text-white py-20 bg-cover bg-center"
       id="rules"
-      style={{ backgroundImage: "url('/bg-img.png')" }}>
+      style={{ backgroundImage: "url('/bg-img.png')" }}
+    >
       <div className="max-w-6xl mx-auto px-4">
-        <h2
-          className="text-3xl sm:text-5xl font-bold text-center mb-12 text-white"
-          data-aos="fade-down">
+        <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-white">
           RULES AND REGULATIONS
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div data-aos="fade-up">
-            <RuleCard
-              title="Selection Process"
-              content="The top 25 participants from across India will be selected and invited to join an 8-hour hackathon at KK Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
-              theme="orange"
-            />
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300">
-            <RuleCard
-              title="National Platform"
-              content="This national-level hackathon serves as a prestigious platform where the brightest minds come together to showcase their skills and shine among the best in the country."
-              theme="blue"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <RuleCard
-              title="Time Constraint"
-              content="Participants will have 8 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
-              theme="orange"
-            />
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300">
-            <RuleCard
-              title="Team Composition"
-              content="Teams can consist of 1-4 members. Diversity in skills and backgrounds is encouraged to foster innovative solutions."
-              theme="blue"
-            />
-          </div>
-          <div data-aos="fade-up">
-            <RuleCard
-              title="Judging Criteria"
-              content="Projects will be judged on innovation, feasibility, technical complexity, and potential impact. A panel of industry experts will evaluate each submission."
-              theme="orange"
-            />
-          </div>
-          <div data-aos="fade-up" data-aos-delay="300">
-            <RuleCard
-              title="Code of Conduct"
-              content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity, and ethical behavior throughout the event."
-              theme="blue"
-            />
-          </div>
+          <RuleCard
+            title="Selection Process"
+            content="The top 25 participants from across India will be selected and invited to join an 8-hour hackathon at KK Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
+            theme="orange"
+          />
+          <RuleCard
+            title="National Platform"
+            content="This national-level hackathon serves as a prestigious platform where the brightest minds come together to showcase their skills and shine among the best in the country."
+            theme="blue"
+          />
+          <RuleCard
+            title="Time Constraint"
+            content="Participants will have 8 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
+            theme="orange"
+          />
+          <RuleCard
+            title="Team Composition"
+            content="Teams can consist of 1-4 members. Diversity in skills and backgrounds is encouraged to foster innovative solutions."
+            theme="blue"
+          />
+          <RuleCard
+            title="Judging Criteria"
+            content="Projects will be judged on innovation, feasibility, technical complexity, and potential impact. A panel of industry experts will evaluate each submission."
+            theme="orange"
+          />
+          <RuleCard
+            title="Code of Conduct"
+            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity, and ethical behavior throughout the event."
+            theme="blue"
+          />
         </div>
       </div>
     </div>
