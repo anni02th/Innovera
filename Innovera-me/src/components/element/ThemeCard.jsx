@@ -67,7 +67,7 @@ const ThemesSection = () => {
         {themes.map((theme, index) => (
           <div
             key={index}
-            onClick={() => toggleCard(index)}
+            // onClick={() => toggleCard(index)}
             className={`relative p-6 rounded-lg transition-all duration-500 cursor-pointer shadow-lg hover:scale-105 ${
               expandedIndex === index
                 ? "w-[1000px] h-[600px] bg-opacity-90"
