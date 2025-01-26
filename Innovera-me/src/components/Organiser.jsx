@@ -81,7 +81,7 @@ const OrganizingTeam = () => {
       <h2 className="text-3xl font-bold text-center mb-8">ORGANIZING TEAM</h2>
       <div className="container mx-auto grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-4">
         {teamData.map((member, index) => (
-          <div key={index} className="bg-gray-800 rounded-lg text-center shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl hover:shadow-white">
+          <div key={index} className="bg-gray-800 rounded-lg text-center shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl hover:shadow-orange-600">
             <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
             <img 
               src={member.image} 

@@ -5,6 +5,7 @@ import Rules from './element/Rules'
 import Timeline from './element/Timeline'
 import ThemeCard from './element/ThemeCard'
 import OrganizingTeam from './Organiser'
+import SponsersSection from './Sponsers'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Rules/>
       <About/>
       <OrganizingTeam/>
+      <SponsersSection/>
       <Timeline/>
     </div>
   )
