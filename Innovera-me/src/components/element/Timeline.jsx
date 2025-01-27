@@ -34,6 +34,7 @@ export default function Timeline() {
     },
   ];
 
+
   return (
     <div className="bg-black bg-cover bg-center py-16" style={{ backgroundImage: "url('/bg-img.png')" }}>
       <div className="max-w-5xl mx-auto px-6 md:px-0">
@@ -46,34 +47,44 @@ export default function Timeline() {
           <div className="absolute left-6 md:left-1/2 h-full w-1 bg-gradient-to-b from-orange-400 to-orange-600 transform -translate-x-1/2" />
 
           {/* Timeline Events */}
-          <div className="space-y-16">
+          <div className="space-y-24">
             {timelineEvents.map((event, index) => (
               <div key={event.number} className="relative">
                 {/* Timeline Dot */}
-                <div className="absolute top-16 left-6 md:left-1/2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform -translate-x-1/2 shadow-md border-2 border-white" />
+                <div className="absolute top-20 left-6 md:left-1/2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform -translate-x-1/2 shadow-md border-2 border-white" />
 
-                {/* Timeline Card */}
+                {/* Timeline Card Container */}
                 <div
-                  className={`relative group hover:scale-105 transition-transform duration-300 ease-in-out ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-16" : "md:pl-16 md:ml-auto"
+                  className={`relative group ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-16" : "md:pl-16 md:ml-auto"
                     }`}
                 >
-                  <div className="p-8 rounded-2xl shadow-lg bg-gradient-to-br from-gray-900 to-gray-800 backdrop-blur-lg border border-gray-700 relative overflow-hidden">
-                    {/* Floating Number */}
-                    <div className="absolute left-0 bg-orange-400 text-5xl font-extrabold text-black">
-                      {event.number}
-                    </div>
+                  {/* Date Above Card */}
+                  <div className="text-orange-400 font-bold text-lg mb-4 text-center">
+                    {event.dates}
+                  </div>
 
-                    {/* Event Content */}
-                    <div>
-                      <p className="text-orange-400 font-bold text-lg mb-2">{event.dates}</p>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-all">
-                        {event.title}
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed">{event.description}</p>
-                    </div>
+                  {/* Main Card */}
+                  <div className="transform transition-all duration-300 hover:scale-105">
+                    <div className=" bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                      {/* Number Circle */}
+                      <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-orange-400 flex items-center justify-center">
+                        <span className="text-black font-bold text-xl">
+                          {event.number}
+                        </span>
+                      </div>
 
-                    {/* Decorative Border */}
-                    <div className="absolute right-0 bottom-0 w-5 h-full bg-orange-400 rounded-r-2xl"></div>
+                      {/* Content */}
+                      <div className="p-8 pl-10">
+                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-all">
+                          {event.title}
+                        </h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          {event.description}
+                        </p>
+                      </div>
+                        <div className="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-orange-400 to-orange-600" />
+
+                    </div>
                   </div>
                 </div>
               </div>
