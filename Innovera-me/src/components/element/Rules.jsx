@@ -70,12 +70,12 @@ const Rules = () => {
           />
           <RuleCard
             title="Time Constraint"
-            content="Participants will have 8 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
+            content="Participants will have 12 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
             theme="orange"
           />
           <RuleCard
             title="Team Composition"
-            content="Teams can consist of 4-6 members(1 female compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
+            content="Teams can consist of 4-6 members(1 female-member compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
             theme="blue"
           />
           <RuleCard
@@ -85,7 +85,7 @@ const Rules = () => {
           />
           <RuleCard
             title="Code of Conduct"
-            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity, and ethical behavior throughout the event."
+            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity and ethical behavior throughout the event."
             theme="blue"
           />
         </div>

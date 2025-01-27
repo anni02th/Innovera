@@ -9,7 +9,7 @@ const themes = [
     additionalContent:
       "AI and ML are revolutionizing industries worldwide, from healthcare to finance, providing efficient and intelligent solutions.",
     description: "Focus: Innovating education technology to shape better learning experiences.",
-    additionalContent: "Key areas:Personalized learning platforms,Gamification of education,Virtual classrooms and collaborative tools,Tools for special education and inclusivity,AI tutors and content recommendation systems,Platforms for skill development and certifications",
+    additionalContent: "Key areas: Personalized learning platforms, Gamification of education, Virtual classrooms and collaborative tools, Tools for special education and inclusivity, AI tutors and content recommendation systems, Platforms for skill development and certifications",
   },
   {
     title: "Terra: Green Tech",
@@ -19,7 +19,7 @@ const themes = [
     additionalContent:
       "Blockchain ensures secure, decentralized, and transparent data handling in IoT networks.",
     description: "Focus: Designing sustainable solutions to protect and heal our planet.",
-    additionalContent: "Key areas:Renewable energy solutions (solar, wind, etc.),Waste management and recycling innovations,Smart agriculture and water management,Carbon footprint reduction technologies,Eco-friendly transportation systems",
+    additionalContent: "Key areas:Renewable energy solutions (solar, wind, etc.), Waste management and recycling innovations, Smart agriculture and water management, Carbon footprint reduction technologies, Eco-friendly transportation systems",
   },
   {
     title: "Hydra: FinTech",
@@ -28,8 +28,8 @@ const themes = [
     description: "Learn about the interconnected world of smart devices.",
     additionalContent:
       "IoT enables real-time monitoring and data collection across various industries, enhancing connectivity and efficiency.",
-    description: "Focus: Revolutionizing financial systems with smarter, safer, and more accessible solutions.",
-    additionalContent: "Key areas:Digital payments and wallets,Blockchain and cryptocurrency innovations,Fraud detection and prevention systems,Investment and wealth management platforms,Financial inclusion and accessibility tools,Banking automation using AI/ML.",
+    description: "Focus: Revolutionizing financial systems with smarter, safer and more accessible solutions.",
+    additionalContent: "Key areas:Digital payments and wallets, Blockchain and cryptocurrency innovations, Fraud detection and prevention systems, Investment and wealth management platforms, Financial inclusion and accessibility tools, Banking automation using AI/ML.",
   },
   {
     title: "Ether: Cyber",
@@ -39,7 +39,7 @@ const themes = [
     additionalContent:
       "Green technology focuses on reducing carbon footprints and promoting renewable energy sources.",
     description: "Focus: Tackling cybersecurity threats to safeguard the digital realm.",
-    additionalContent: "Key areas:Cyber threat detection and mitigation tools,Data encryption and secure communication,Identity and access management solutions,Network security innovations,Cloud security enhancements,Ethical hacking and penetration testing",
+    additionalContent: "Key areas:Cyber threat detection and mitigation tools, Data encryption and secure communication, Identity and access management solutions, Network security innovations, Cloud security enhancements, Ethical hacking and penetration testing",
   },
   {
     title: "Ignis: Next Gen",
@@ -49,7 +49,7 @@ const themes = [
     additionalContent:
       "Your innovative ideas can pave the way for groundbreaking solutions and opportunities.",
     description: "Focus: Creating futuristic tech that transforms how we live, work, and play.",
-    additionalContent: "Key areas:Artificial Intelligence and Machine Learning applications,Internet of Things (IoT) for smart living,Augmented Reality (AR) and Virtual Reality (VR) experiences,Robotics and automation,5G and connectivity advancements",
+    additionalContent: "Key areas:Artificial Intelligence and Machine Learning applications, Internet of Things (IoT) for smart living, Augmented Reality (AR) and Virtual Reality (VR) experiences, Robotics and automation, 5G and connectivity advancements",
   },
 ];
 
