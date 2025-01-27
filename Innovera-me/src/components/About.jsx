@@ -5,7 +5,7 @@ const AboutInnovEra = () => {
     {
       title: "WHAT is Techathon?",
       description:
-        "Techathon is a dynamic hackathon designed to bring together innovative minds to solve real-world challenges. It’s a platform for tech enthusiasts, developers and creators to showcase their skills and create impactful solutions.",
+        "Techathon is a National hackathon designed to bring together innovative minds to solve real-world challenges. It’s a platform for tech enthusiasts, developers and creators to showcase their skills and create impactful solutions.",
       gradient: "bg-gradient-to-r from-orange-300 to-orange-400",
       img: "/fire-card.png",
     },
