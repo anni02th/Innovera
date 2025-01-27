@@ -7,85 +7,100 @@ const teamData = [
     team: "Marketing & Secretariat",
     role: "Head",
     image: "/images/shivraj.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 0,
   },
   {
     name: "Kundan Suryavanshi",
     team: "Logistics & EPM",
     role: "Head",
     image: "/images/kundan.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 100,
   },
   {
     name: "Riddhi Singvi",
     team: "Sponsorship & Curation",
     role: "Head",
     image: "/images/riddhi.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 200,
   },
   {
     name: "Ashish Nagmoti",
     team: "WEB & IT",
     role: "Head",
     image: "/images/ashish.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 0,
   },
   {
     name: "Aditya Ahirrao",
     team: "Design & Branding",
     role: "Head",
     image: "/images/aditya.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 100,
   },
   {
     name: "Soham Penshanwar",
     team: "Finance & Participant Affairs",
     role: "Head",
     image: "/images/soham.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 200,
   },
   {
     name: "Samyak Raka",
     team: "Hackathon Operations",
     role: "Head",
     image: "/images/samyak.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 0,
   },
   {
     name: "Suraj Yeola",
     team: "Research & Planning",
     role: "Head",
     image: "/images/suraj.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 100,
   },
   {
     name: "Rimzim Chark",
     team: "Research & Planning",
     role: "Co-Head",
     image: "/images/rimzim.jpg",
-    socials: ["facebook", "instagram", "linkedin"]
-  }
+    socials: ["facebook", "instagram", "linkedin"],
+    delay: 200,
+  },
 ];
 
 const iconMap = {
   facebook: <FaFacebookF />,
   instagram: <FaInstagram />,
-  linkedin: <FaLinkedinIn />
+  linkedin: <FaLinkedinIn />,
 };
 
 const OrganizingTeam = () => {
   return (
-    <div className="bg-black text-white py-12 px-4"
-    style={{ backgroundImage: "url('/bg-img.png')" }}
-    >
-      <h2 className="text-3xl font-bold text-center mb-8">ORGANIZING TEAM</h2>
+    <div
+      className="bg-black text-white py-12 px-4"
+      style={{ backgroundImage: "url('/bg-img.png')" }}>
+      <h2 data-aos="fade-in" className="text-3xl font-bold text-center mb-8">
+        ORGANIZING TEAM
+      </h2>
       <div className="container mx-auto grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-4">
         {teamData.map((member, index) => (
-          <div key={index} className="bg-gray-800 rounded-lg text-center shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl hover:shadow-orange-600">
+          <div
+            key={index}
+            className="bg-gray-800 rounded-lg text-center shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-xl hover:shadow-orange-600"
+            data-aos="fade-up"
+            data-aos-delay={member.delay}>
             <h3 className="text-lg font-semibold mt-4">{member.name}</h3>
-            <img 
-              src={member.image} 
-              alt={member.name} 
+            <img
+              src={member.image}
+              alt={member.name}
               className="h-48 w-48 mx-auto rounded-md object-cover my-3 border border-gray-600"
             />
             <p className="font-medium text-gray-300">{member.role} of</p>
