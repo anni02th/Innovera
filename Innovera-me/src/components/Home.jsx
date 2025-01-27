@@ -14,8 +14,8 @@ const Home = () => {
       <ThemeCard/>
       <Rules/>
       <About/>
-      <OrganizingTeam/>
-      <SponsersSection/>
+      {/* <OrganizingTeam/>
+      <SponsersSection/> */}
       <Timeline/>
     </div>
   )

@@ -49,9 +49,8 @@ export default function Timeline() {
         <div className="relative pb-4">
           {/* Vertical Line */}
           <div className="absolute left-4 md:left-1/2 h-full w-1 bg-white transform -translate-x-1/2" />
-
           {/* Timeline Events */}
-          <div className="space-y-8">
+          <div className="space-y-16">
             {timelineEvents.map((event, index) => (
               <div
                 key={event.number}
@@ -80,6 +79,18 @@ export default function Timeline() {
                         <p className="text-gray-300">{event.description}</p>
                       </div>
                     </div>
+
+                    {/* Event Content */}
+                    <div>
+                      <p className="text-orange-400 font-bold text-lg mb-2">{event.dates}</p>
+                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-all">
+                        {event.title}
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed">{event.description}</p>
+                    </div>
+
+                    {/* Decorative Border */}
+                    <div className="absolute right-0 bottom-0 w-5 h-full bg-orange-400 rounded-r-2xl"></div>
                   </div>
                 </div>
               </div>
