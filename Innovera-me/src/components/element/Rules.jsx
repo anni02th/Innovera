@@ -60,7 +60,7 @@ const Rules = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RuleCard
             title="Selection Process"
-            content="The top 25 participants from across India will be selected and invited to join an 8-hour hackathon at KK Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
+            content="The top 25 participants from across India will be selected and invited to join an 12-hour hackathon at KK Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
             theme="orange"
           />
           <RuleCard
@@ -75,7 +75,7 @@ const Rules = () => {
           />
           <RuleCard
             title="Team Composition"
-            content="Teams can consist of 1-4 members. Diversity in skills and backgrounds is encouraged to foster innovative solutions."
+            content="Teams can consist of 4-6 members(1 female compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
             theme="blue"
           />
           <RuleCard
