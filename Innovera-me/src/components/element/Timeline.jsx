@@ -46,7 +46,7 @@ export default function Timeline() {
           TIMELINE
         </h1>
 
-        <div className="relative">
+        <div className="relative pb-4">
           {/* Vertical Line */}
           <div className="absolute left-4 md:left-1/2 h-full w-1 bg-white transform -translate-x-1/2" />
 
