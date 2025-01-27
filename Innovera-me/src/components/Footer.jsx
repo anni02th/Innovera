@@ -75,29 +75,29 @@ import { Link } from "react-router-dom"; // Assuming you're using React Router
 //         </div>
 
 //         {/* TnC Modal */}
-//         {tncOpen && (
-//           <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
-//             <div className="bg-gray-900 p-8 rounded-lg shadow-2xl max-w-3xl w-full mx-4 md:mx-auto relative">
-//               <button
-//                 onClick={() => setTncOpen(false)}
-//                 className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl"
-//               >
-//                 &times;
-//               </button>
-//               <h2 className="text-2xl font-bold mb-4 text-purple-400">Terms and Conditions</h2>
-//               <p className="text-gray-300">
-//                 Here are the terms and conditions for using this website. Please read them
-//                 carefully before using any features or services provided.
-//               </p>
-//               <ul className="list-disc ml-6 mt-4 text-gray-400">
-//                 <li>All information is for educational purposes only.</li>
-//                 <li>Content must not be used for any illegal activities.</li>
-//                 <li>Respect intellectual property and copyright rules.</li>
-//                 <li>For any concerns, contact our support team.</li>
-//               </ul>
-//             </div>
-//           </div>
-//         )}
+// {tncOpen && (
+//   <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+//     <div className="bg-gray-900 p-8 rounded-lg shadow-2xl max-w-3xl w-full mx-4 md:mx-auto relative">
+//       <button
+//         onClick={() => setTncOpen(false)}
+//         className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl"
+//       >
+//         &times;
+//       </button>
+//       <h2 className="text-2xl font-bold mb-4 text-purple-400">Terms and Conditions</h2>
+//       <p className="text-gray-300">
+//         Here are the terms and conditions for using this website. Please read them
+//         carefully before using any features or services provided.
+//       </p>
+//       <ul className="list-disc ml-6 mt-4 text-gray-400">
+//         <li>All information is for educational purposes only.</li>
+//         <li>Content must not be used for any illegal activities.</li>
+//         <li>Respect intellectual property and copyright rules.</li>
+//         <li>For any concerns, contact our support team.</li>
+//       </ul>
+//     </div>
+//   </div>
+// )}
 //       </div>
 //       <div className="text-center text-gray-500 mt-8">
 //          {new Date().getFullYear()} KKWIEER. All rights reserved.
@@ -108,6 +108,8 @@ import { Link } from "react-router-dom"; // Assuming you're using React Router
 // };
 
 const Footer = () => {
+  const [tncOpen, setTncOpen] = useState(false);
+
   return (
     <footer className="bg-neutral-700 p-4 flex flex-col sm:flex-row sm:justify-around sm:items-center">
       <section>
@@ -154,11 +156,39 @@ const Footer = () => {
         <div className="flex flex-col gap-3 sm:m-4 my-4">
           <h1 className="text-2xl text-neutral-300 font-semibold">Legal</h1>
 
-          <p className="text-neutral-400">Terms & Conditions</p>
+          <p className="text-neutral-400" onClick={() => setTncOpen(true)}>
+            Terms & Conditions
+          </p>
           <p className="text-neutral-400">Privacy & Policy</p>
           <p className="text-neutral-400">Disclaimer</p>
         </div>
       </section>
+
+      {tncOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50">
+          <div className="bg-gray-900 p-8 rounded-lg shadow-2xl max-w-3xl w-full mx-4 md:mx-auto relative">
+            <button
+              onClick={() => setTncOpen(false)}
+              className="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl">
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4 text-purple-400">
+              Terms and Conditions
+            </h2>
+            <p className="text-gray-300">
+              Here are the terms and conditions for using this website. Please
+              read them carefully before using any features or services
+              provided.
+            </p>
+            <ul className="list-disc ml-6 mt-4 text-gray-400">
+              <li>All information is for educational purposes only.</li>
+              <li>Content must not be used for any illegal activities.</li>
+              <li>Respect intellectual property and copyright rules.</li>
+              <li>For any concerns, contact our support team.</li>
+            </ul>
+          </div>
+        </div>
+      )}
     </footer>
   );
 };
