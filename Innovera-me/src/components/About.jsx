@@ -18,8 +18,7 @@ const AboutInnovEra = () => {
     },
     {
       title: "WHAT are themes of Techathon?",
-      description:
-        `Participants can explore diverse themes, such as:
+      description: `Participants can explore diverse themes, such as:
 Artificial Intelligence and Machine Learning 
 Blockchain and Web3
 Internet of Things (IoT)
@@ -30,8 +29,7 @@ Open Innovation (Your own ideas!)`,
     },
     {
       title: "WHY to participate?",
-      description:
-        `Skill Development
+      description: `Skill Development
 Networking
 Challenge
 Creativity
@@ -47,29 +45,30 @@ Fun and Collaboration`,
   return (
     <div
       className="bg-black py-16 px-8 min-h-screen bg-cover bg-center flex flex-col items-center"
-      style={{ backgroundImage: "url('/bg-img.png')" }}
-    >
-      <h2 className="text-center text-white text-3xl sm:text-5xl font-bold mb-14">
+      style={{ backgroundImage: "url('/bg-img.png')" }}>
+      <h2
+        className="text-center text-white text-3xl sm:text-5xl font-bold mb-14"
+        data-aos="fade-in">
         ABOUT INNOV-ERA
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+        data-aos="fade-right">
         {data.map((item, index) => (
           <div
             key={index}
-            className={`relative p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:shadow-white ${item.gradient} text-black ${index % 2 === 0
-              ? "sm:-rotate-6 hover:rotate-0"
-              : "sm:rotate-6 hover:rotate-0"
-              }`}
-          >
+            className={`relative p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl hover:shadow-white ${
+              item.gradient
+            } text-black ${
+              index % 2 === 0
+                ? "sm:-rotate-6 hover:rotate-0"
+                : "sm:rotate-6 hover:rotate-0"
+            }`}>
             <h3 className="text-xl sm:text-2xl font-bold mb-4 text-center">
               {item.title}
             </h3>
             <div className="absolute left-1/2 top-1/2 transform -translate-y-1/2 -translate-x-1/2 bg-center bg-no-repeat bg-contain">
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-auto"
-              />
+              <img src={item.img} alt={item.title} className="w-auto" />
             </div>
             <p className=" text-zinc-800 text-base sm:text-lg font-normal leading-relaxed mb-4">
               {item.description}
@@ -77,9 +76,9 @@ Fun and Collaboration`,
             {item.button && (
               <div className="text-center z-10">
                 <a href="#">
-                <button className="bg-white mt-12 text-black font-medium border px-5 py-2 rounded-3xl hover:bg-gray-200 transition">
-                  Register
-                </button>
+                  <button className="bg-white mt-12 text-black font-medium border px-5 py-2 rounded-3xl hover:bg-gray-200 transition">
+                    Register
+                  </button>
                 </a>
               </div>
             )}
