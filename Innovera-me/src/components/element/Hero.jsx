@@ -5,20 +5,14 @@ const Hero = () => {
     <div
       className="bg-black text-white py-16 px-8 flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
       style={{ backgroundImage: "url('/bg-img.png')" }}>
-      <div className="text-center flex flex-col items-center z-10" data-aos="fade-up">
+      <div className="text-center flex flex-col items-center z-10">
         <img src="/main-img.png" alt="Moscot" width={400}/>
         <h1 className="text-4xl sm:text-8xl font-bold mb-6">INNOV-ERA</h1>
         <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-          <span className="text-orange-400 font-semibold">Innov-era</span> is a
-          dynamic hackathon designed to bring together innovative minds to solve{" "}
-          <span className="text-green-400 font-semibold">
-            real-world challenges
-          </span>
-          . It’s a platform for tech enthusiasts,{" "}
-          <span className="text-blue-400 font-semibold">developers</span>, and
-          creators to showcase their{" "}
-          <span className="text-indigo-400 font-semibold">skills</span> and
-          create impactful{" "}
+          <span className="text-orange-400 font-semibold">Innov-era</span> is a dynamic hackathon designed to bring together
+          innovative minds to solve <span className="text-green-400 font-semibold">real-world challenges</span>. It’s a platform
+          for tech enthusiasts, <span className="text-blue-400 font-semibold">developers</span>, and creators to showcase
+          their <span className="text-indigo-400 font-semibold">skills</span> and create impactful{" "}
           <span className="text-teal-400 font-semibold">solutions</span>.
         </p>
 
@@ -38,7 +32,9 @@ const Hero = () => {
           </button>
         </div>
       </div>
+      
     </div>
+
   );
 };
 
