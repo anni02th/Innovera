@@ -1,16 +1,17 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import './App.css';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import About from './components/About';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import About from "./components/About";
 import Themes from "./components/Themes.jsx";
-import Organiser from "./components/Organiser.jsx"
+import Organiser from "./components/Organiser.jsx";
 import Rules from "./components/Rules.jsx";
-import Timeline from './components/Timeline.jsx'
+import Timeline from "./components/Timeline.jsx";
+import { useEffect } from "react";
+import AOS from "aos";
 
 function App() {
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       {/* Define Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,9 +30,9 @@ function App() {
         <Route path="/organiser" element={<Organiser />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/timeline" element={<Timeline />} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
