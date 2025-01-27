@@ -11,8 +11,7 @@ export default function Timeline() {
       dates: "24 Jan - 4 Feb",
       number: "02",
       title: "Registration window",
-      description:
-        "This is the time to secure your spot in an exhilarating hackathon where ideas come to life.",
+      description: "This is the time to secure your spot in an exhilarating hackathon where ideas come to life.",
     },
     {
       dates: "5 Feb - 12 Feb",
@@ -35,62 +34,57 @@ export default function Timeline() {
     },
   ];
 
+
   return (
-    <div
-      className=" bg-black bg-cover bg-center"
-      style={{ backgroundImage: "url('/bg-img.png')" }}>
-      <div className="max-w-4xl mx-auto">
-        <h1
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
-          data-aos="fade-up">
+    <div className="bg-black bg-cover bg-center py-16" style={{ backgroundImage: "url('/bg-img.png')" }}>
+      <div className="max-w-5xl mx-auto px-6 md:px-0">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-16 tracking-wide">
           TIMELINE
         </h1>
 
-        <div className="relative pb-4">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 h-full w-1 bg-white transform -translate-x-1/2" />
-          {/* Timeline Events */}
-          <div className="space-y-16">
-            {timelineEvents.map((event, index) => (
-              <div
-                key={event.number}
-                className="relative"
-                data-aos={index % 2 == 0 ? "fade-right" : "fade-left"}>
-                {/* Dot */}
-                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-white rounded-full transform -translate-x-1/2" />
+        <div className="relative">
+          {/* Vertical Timeline Line */}
+          <div className="absolute left-6 md:left-1/2 h-full w-1 bg-gradient-to-b from-orange-400 to-orange-600 transform -translate-x-1/2" />
 
-                {/* Content */}
+          {/* Timeline Events */}
+          <div className="space-y-24">
+            {timelineEvents.map((event, index) => (
+              <div key={event.number} className="relative">
+                {/* Timeline Dot */}
+                <div className="absolute top-20 left-6 md:left-1/2 w-6 h-6 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full transform -translate-x-1/2 shadow-md border-2 border-white" />
+
+                {/* Timeline Card Container */}
                 <div
-                  className={`ml-12 md:ml-0 md:w-1/2 ${
-                    index % 2 === 0 ? "md:pr-12" : "md:pl-12 md:ml-auto"
-                  }`}>
-                  <div className="bg-gray-800/80 backdrop-blur rounded-lg p-6 border border-cyan-400/20">
-                    <div className="flex items-start gap-4">
-                      <div className="text-4xl font-bold text-[#EAAC76]">
-                        {event.number}
+                  className={`relative group ml-16 md:ml-0 md:w-1/2 ${index % 2 === 0 ? "md:pr-16" : "md:pl-16 md:ml-auto"
+                    }`}
+                >
+                  {/* Date Above Card */}
+                  <div className="text-orange-400 font-bold text-lg mb-4 text-center">
+                    {event.dates}
+                  </div>
+
+                  {/* Main Card */}
+                  <div className="transform transition-all duration-300 hover:scale-105">
+                    <div className=" bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                      {/* Number Circle */}
+                      <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-orange-400 flex items-center justify-center">
+                        <span className="text-black font-bold text-xl">
+                          {event.number}
+                        </span>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-1">
+
+                      {/* Content */}
+                      <div className="p-8 pl-10">
+                        <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-orange-400 transition-all">
                           {event.title}
                         </h3>
-                        <p className="text-[#5A83F1] font-medium mb-2">
-                          {event.dates}
+                        <p className="text-gray-300 leading-relaxed">
+                          {event.description}
                         </p>
-                        <p className="text-gray-300">{event.description}</p>
                       </div>
-                    </div>
+                        <div className="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-orange-400 to-orange-600" />
 
-                    {/* Event Content */}
-                    <div>
-                      <p className="text-orange-400 font-bold text-lg mb-2">{event.dates}</p>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-400 transition-all">
-                        {event.title}
-                      </h3>
-                      <p className="text-gray-300 leading-relaxed">{event.description}</p>
                     </div>
-
-                    {/* Decorative Border */}
-                    <div className="absolute right-0 bottom-0 w-5 h-full bg-orange-400 rounded-r-2xl"></div>
                   </div>
                 </div>
               </div>
