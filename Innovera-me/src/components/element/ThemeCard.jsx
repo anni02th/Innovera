@@ -6,35 +6,40 @@ const themes = [
     gradient: "bg-gradient-to-r from-[#B2F4FF] to-[#52BCCE]",
     image: "/wind.png",
     description: "Explore the latest advancements in AI and ML technologies.",
-    additionalContent: "AI and ML are revolutionizing industries worldwide, from healthcare to finance, providing efficient and intelligent solutions.",
+    additionalContent:
+      "AI and ML are revolutionizing industries worldwide, from healthcare to finance, providing efficient and intelligent solutions.",
   },
   {
     title: "Blockchain and Web3 Internet of Things (IoT)",
     gradient: "bg-gradient-to-r from-[#B7E4C7] to-[#81B499]",
     image: "/ground.png",
     description: "Discover how blockchain is transforming IoT applications.",
-    additionalContent: "Blockchain ensures secure, decentralized, and transparent data handling in IoT networks.",
+    additionalContent:
+      "Blockchain ensures secure, decentralized, and transparent data handling in IoT networks.",
   },
   {
     title: "Internet of Things (IoT)",
     gradient: "bg-gradient-to-r from-[#A3DFFF] to-[#2B7BCD]",
     image: "/water.png",
     description: "Learn about the interconnected world of smart devices.",
-    additionalContent: "IoT enables real-time monitoring and data collection across various industries, enhancing connectivity and efficiency.",
+    additionalContent:
+      "IoT enables real-time monitoring and data collection across various industries, enhancing connectivity and efficiency.",
   },
   {
     title: "Sustainability and Green Tech Open Innovation",
     gradient: "bg-gradient-to-r from-[#A3B9F3] to-[#5A83F1]",
     image: "/space.png",
     description: "Innovative solutions for a sustainable future.",
-    additionalContent: "Green technology focuses on reducing carbon footprints and promoting renewable energy sources.",
+    additionalContent:
+      "Green technology focuses on reducing carbon footprints and promoting renewable energy sources.",
   },
   {
     title: "Derived solely from your original concepts!",
     gradient: "bg-gradient-to-r from-[#FFD7B5] to-[#EAAC76]",
     image: "/fire.png",
     description: "Unique ideas that stem from your creativity.",
-    additionalContent: "Your innovative ideas can pave the way for groundbreaking solutions and opportunities.",
+    additionalContent:
+      "Your innovative ideas can pave the way for groundbreaking solutions and opportunities.",
   },
 ];
 
@@ -47,52 +52,103 @@ const ThemesSection = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-center bg-black text-black p-6 py-10 min-h-screen bg-cover bg-center"
+      className="min-h-screen bg-black bg-cover bg-center p-4 md:p-8"
       style={{ backgroundImage: "url('/bg-img.png')" }}
       id="themes"
     >
-      <h2 className="text-3xl md:text-5xl text-white font-bold my-12">THEMES</h2>
-      <div className="flex flex-wrap justify-center gap-8">
-        {themes.map((theme, index) => (
-          <div
-            key={index}
-            onClick={() => toggleCard(index)}
-            className={`relative p-6 rounded-lg transition-all duration-500 cursor-pointer shadow-lg hover:scale-105 ${
-              expandedIndex === index
-                ? "w-[1000px] h-[600px] bg-opacity-90"
-                : "w-[300px] md:w-[380px] h-[250px]"
-            } ${theme.gradient}`}
-            style={{
-              overflow: "hidden",
-            }}
-          >
-            <h3 className="text-lg font-bold ">{theme.title}</h3>
-            <img
-              src={theme.image}
-              alt={theme.title}
-              className={`mt-4  transition-transform duration-300 ${
-                expandedIndex === index
-                  ? "animate-spin-slow"
-                  : ""
-              }`}
-            />
-            <button className="absolute bottom-4 right-4 bg-white text-3xl text-black rounded-xl px-2 shadow-lg">
-              &rarr;
-            </button>
+      <h2 className="text-3xl md:text-5xl text-white font-bold text-center my-8">
+        THEMES
+      </h2>
+      
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {themes.map((theme, index) => (
             <div
-              className={`mt-4 text-white transition-opacity duration-500 ${
-                expandedIndex === index ? "opacity-100" : "opacity-0"
+              key={index}
+              className={`transition-all duration-500 ease-in-out ${
+                expandedIndex === index
+                  ? "col-span-1 md:col-span-2 lg:col-span-3 h-[500px] md:h-[400px]"
+                  : "h-[250px]"
               }`}
             >
-              <p>{theme.description}</p>
-              {expandedIndex === index && (
-                <div className="mt-4">
-                  <p className="text-sm">{theme.additionalContent}</p>
+              <div
+                onClick={() => toggleCard(index)}
+                className={`${theme.gradient} rounded-2xl p-6 h-full w-full cursor-pointer 
+                  transition-all duration-500 ease-in-out relative overflow-hidden
+                  ${
+                    expandedIndex === index
+                      ? "scale-100"
+                      : expandedIndex !== null
+                      ? "scale-95 opacity-70"
+                      : "hover:scale-105"
+                  }`}
+              >
+                <div className={`transition-all duration-500 ${
+                  expandedIndex === index
+                    ? "flex flex-col md:flex-row items-start gap-8"
+                    : ""
+                }`}>
+                  {/* Content Container */}
+                  <div className={`${
+                    expandedIndex === index
+                      ? "md:w-2/3"
+                      : "w-full"
+                  }`}>
+                    <h3 className={`font-bold transition-all duration-300 ${
+                      expandedIndex === index
+                        ? "text-2xl md:text-3xl mb-6"
+                        : "text-lg mb-3"
+                    }`}>
+                      {theme.title}
+                    </h3>
+                    
+                    <p className="text-sm md:text-base mb-4">
+                      {theme.description}
+                    </p>
+
+                    {/* Additional content shown when expanded */}
+                    <div className={`transition-all duration-500 ${
+                      expandedIndex === index
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-10 hidden"
+                    }`}>
+                      <p className="text-sm md:text-base">
+                        {theme.additionalContent}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Image Container */}
+                  <div className={`transition-all duration-500 ${
+                    expandedIndex === index
+                      ? "md:w-1/3"
+                      : "w-full mt-4"
+                  }`}>
+                    <img
+                      src={theme.image}
+                      alt={theme.title}
+                      className={`transition-all duration-500 ${
+                        expandedIndex === index
+                          ? "animate-spin-slow w-full"
+                          : "w-24 md:w-32"
+                      }`}
+                    />
+                  </div>
                 </div>
-              )}
+
+                {/* Arrow button */}
+                <button
+                  className={`absolute bottom-4 right-4 bg-white text-3xl text-black 
+                    rounded-xl px-2 shadow-lg transition-opacity duration-300 ${
+                      expandedIndex === index ? "opacity-0" : "opacity-100"
+                    }`}
+                >
+                  &rarr;
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
