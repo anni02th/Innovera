@@ -1,38 +1,61 @@
 export default function Timeline() {
   const timelineEvents = [
     {
-      dates: "20 Jan - 23 Jan",
+      dates: "27 Jan - 7 Feb",
       number: "01",
-      title: "Pre-registration",
-      description:
-        "Gear up for innovation! The team's pre-register preps start now to ensure a smooth functioning of the event",
-    },
-    {
-      dates: "24 Jan - 4 Feb",
-      number: "02",
-      title: "Registration window",
-      description: "This is the time to secure your spot in an exhilarating hackathon where ideas come to life.",
+      title: "Registration Window",
+      description: "Secure your spot in this dynamic competition and take the first step toward showcasing your skills.",
     },
     {
       dates: "5 Feb - 12 Feb",
-      number: "03",
-      title: "Submission window",
-      description: "This is the time to submit your round 1 projects.",
+      number: "02",
+      title: "Submission Window",
+      description: "Submit your Phase 1 projects to demonstrate your innovative ideas and creativity.",
     },
     {
-      dates: "13 Feb - 15 Feb",
-      number: "04",
-      title: "Evaluation Round 1 (PPT)",
-      description:
-        "Showcase your vision! Participate in the PPT evaluation round to present your ideas and impress the judges.",
+      dates: "12 Feb - 15 Feb",
+      number: "03",
+      title: "PHASE 1: Sankalp Evaluation (PPT)",
+      description: "Participate in the first evaluation round by presenting your ideas in a PPT format.",
     },
     {
       dates: "16 Feb",
+      number: "04",
+      title: "Results Round 1",
+      description: "Judges will announce the results of the first evaluation round.",
+    },
+    {
+      dates: "16 Feb - 18 Feb",
       number: "05",
-      title: "Results Round 1 (PPT)",
-      description: "Result of round 1 will be declared by judges.",
+      title: "Preparation Time for Round 2",
+      description: "Gear up for the next challenge and refine your ideas for Phase 2: Prakalp.",
+    },
+    {
+      dates: "19 Feb - 20 Feb",
+      number: "06",
+      title: "Submission for PHASE 2: Prakalp",
+      description: "Submit your Phase 2 projects in the form of a video to showcase your execution.",
+    },
+    {
+      dates: "20 Feb - 21 Feb",
+      number: "07",
+      title: "PHASE 2: Prakalp Evaluation (Video)",
+      description: "Judges will evaluate your projects in the second round to determine finalists.",
+    },
+    {
+      dates: "22 Feb",
+      number: "08",
+      title: "Round 2 Result Announcement",
+      description: "Finalists for the ultimate phase will be announced based on Phase 2 evaluations.",
+    },
+    {
+      dates: "2 Mar",
+      number: "09",
+      title: "PHASE 3: Utkarsh (Offline Hackathon)",
+      description: "Compete in the grand finale—a 12-hour offline hackathon to showcase your ultimate skills.",
     },
   ];
+  
 
 
   return (
