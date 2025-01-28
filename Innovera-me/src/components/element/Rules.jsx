@@ -60,8 +60,13 @@ const Rules = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RuleCard
             title="Selection Process"
-            content="The top 25 participants from across India will be selected and invited to join an 12-hour hackathon at K.K Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
-            theme="orange"
+   content={
+    <>
+      <p>Round 1 (Online): Top 25 teams per theme are selected based on a 5-slide PPT submission.</p>
+      <p>Round 2 (Online): Top 5 teams per theme qualify after submitting a prototype video.</p>
+      <p>Round 3 (Offline): Finalists participate in an offline 12-hour hackathon.</p>
+    </>
+  }            theme="orange"
           />
           <RuleCard
             title="National Platform"

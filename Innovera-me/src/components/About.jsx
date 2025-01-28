@@ -3,40 +3,40 @@ import React from "react";
 const AboutInnovEra = () => {
   const data = [
     {
-      title: "WHAT is Techathon?",
+      title: "WHAT is Innovera?",
       description:
-        "Techathon is a National hackathon designed to bring together innovative minds to solve real-world challenges. It’s a platform for tech enthusiasts, developers and creators to showcase their skills and create impactful solutions.",
+        "Innovera is a National hackathon designed to bring together innovative minds to solve real-world challenges. It’s a platform for tech enthusiasts, developers and creators to showcase their skills and create impactful solutions.",
       gradient: "bg-gradient-to-r from-orange-300 to-orange-400",
       img: "/fire-card.png",
     },
     {
-      title: "WHO can participate in Techathon?",
+      title: "WHO can participate in Innovera?",
       description:
-        "Techathon is open to everyone—students, professionals and tech enthusiasts alike! Whether you want to participate individually or collaborate as a team, this event is your chance to innovate, learn and connect with like-minded individuals.",
+        "Innovera is open to everyone—students, professionals and tech enthusiasts alike! Whether you want to participate individually or collaborate as a team, this event is your chance to innovate, learn and connect with like-minded individuals.",
       gradient: "bg-gradient-to-r from-green-300 to-green-400",
       img: "/ground-card.png",
     },
     {
-      title: "WHAT are themes of Techathon?",
+      title: "WHAT are themes of Innovera?",
       description:
         `Participants can explore diverse themes, such as:
-Artificial Intelligence and Machine Learning 
-Blockchain and Web3
-Internet of Things (IoT)
-Sustainability and Green Tech
-Open Innovation (Your own ideas!)`,
+Aero: EdTech,
+Terra: Green Tech,
+Hydra: FinTech,
+Ether: Cyber,
+Ignis: Next Gen`,
       gradient: "bg-gradient-to-r from-blue-300 to-blue-400",
       img: "/wind-card.png",
     },
     {
       title: "WHY to participate?",
       description:
-        `Skill Development
-Networking
-Challenge
-Creativity
-Prizes
-Resume Building
+        `Skill Development,
+Networking,
+Challenge,
+Creativity,
+Prizes,
+Resume Building,
 Fun and Collaboration`,
       gradient: "bg-gradient-to-r from-purple-300 to-purple-400",
       img: "/space-card.png",
@@ -76,7 +76,7 @@ Fun and Collaboration`,
             </p>
             {item.button && (
               <div className="text-center z-10">
-                <a href="#">
+                <a href="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664">
                 <button className="bg-white mt-12 text-black font-medium border px-5 py-2 rounded-3xl hover:bg-gray-200 transition">
                   Register
                 </button>

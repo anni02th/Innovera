@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as ScrollLink } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -24,12 +25,18 @@ const Hero = () => {
         </div>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <button className="bg-white text-black font-medium px-6 py-2 rounded-full border border-white hover:text-white transition hover:bg-black">
+          <a href ="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664" className="bg-white text-black font-medium px-6 py-2 rounded-full border border-white hover:text-white transition hover:bg-black">
             Register
-          </button>
-          <button className="bg-black border border-white text-white font-medium px-6 py-2 rounded-full hover:bg-zinc-900 transition hover:scale-105">
+          </a>
+          
+    <ScrollLink
+            className="bg-black border border-white text-white font-medium px-6 py-2 rounded-full hover:bg-zinc-900 transition hover:scale-105"
+            to="themes"
+            smooth={true}
+            duration={500}
+          >
             Details
-          </button>
+          </ScrollLink>
         </div>
       </div>
       
