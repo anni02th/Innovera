@@ -32,14 +32,14 @@ const Navbar = () => {
           >
             Themes
           </ScrollLink>
-          <ScrollLink
+    { /*<ScrollLink
             className="px-6 py-2 bg-black rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="organiser"
             smooth={true}
             duration={500}
           >
             Organiser
-          </ScrollLink>
+          </ScrollLink>*/}
           <ScrollLink
             className="px-6 py-2 bg-black rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="rules"
@@ -56,14 +56,14 @@ const Navbar = () => {
           >
             Timeline
           </ScrollLink>
-          <ScrollLink
+    {/*<ScrollLink
             className="px-6 py-2 bg-black rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="about"
             smooth={true}
             duration={500}
           >
             About Us
-          </ScrollLink>
+          </ScrollLink>*/}
         </div>
       </section>
 

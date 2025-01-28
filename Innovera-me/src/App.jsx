@@ -7,7 +7,7 @@ import About from './components/About';
 import Themes from "./components/Themes.jsx";
 import Organiser from "./components/Organiser.jsx"
 import Rules from "./components/Rules.jsx";
-import Timeline from './components/Timeline.jsx'
+import Timeline from './components/Timeline.jsx';
 
 function App() {
   return (

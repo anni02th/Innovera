@@ -60,8 +60,13 @@ const Rules = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RuleCard
             title="Selection Process"
-            content="The top 25 participants from across India will be selected and invited to join an 12-hour hackathon at KK Wagh College. This rigorous selection ensures only the most innovative minds make it to the final event."
-            theme="orange"
+   content={
+    <>
+      <p>Round 1 (Online): Top 25 teams per theme are selected based on a 5-slide PPT submission.</p>
+      <p>Round 2 (Online): Top 5 teams per theme qualify after submitting a prototype video.</p>
+      <p>Round 3 (Offline): Finalists participate in an offline 12-hour hackathon.</p>
+    </>
+  }            theme="orange"
           />
           <RuleCard
             title="National Platform"
@@ -70,12 +75,12 @@ const Rules = () => {
           />
           <RuleCard
             title="Time Constraint"
-            content="Participants will have 8 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
+            content="Participants will have 12 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
             theme="orange"
           />
           <RuleCard
             title="Team Composition"
-            content="Teams can consist of 4-6 members(1 female compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
+            content="Teams can consist of 4-6 members(1 female-member compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
             theme="blue"
           />
           <RuleCard
@@ -85,7 +90,7 @@ const Rules = () => {
           />
           <RuleCard
             title="Code of Conduct"
-            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity, and ethical behavior throughout the event."
+            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity and ethical behavior throughout the event."
             theme="blue"
           />
         </div>
