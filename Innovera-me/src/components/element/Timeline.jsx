@@ -36,7 +36,7 @@ export default function Timeline() {
 
 
   return (
-    <div className="bg-black bg-cover bg-center py-16" style={{ backgroundImage: "url('/bg-img.png')" }}>
+    <div id="timeline" className="bg-black bg-cover bg-center py-16" style={{ backgroundImage: "url('/bg-img.png')" }}>
       <div className="max-w-5xl mx-auto px-6 md:px-0">
         <h1 className="text-4xl md:text-5xl font-extrabold text-white text-center mb-16 tracking-wide">
           TIMELINE
