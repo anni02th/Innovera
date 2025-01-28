@@ -89,7 +89,7 @@ const Navbar = () => {
           >
             Themes
           </ScrollLink>
-          <ScrollLink
+    {/*<ScrollLink
             className="px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="organiser"
             smooth={true}
@@ -97,7 +97,7 @@ const Navbar = () => {
             onClick={toggleSidebar}
           >
             Organiser
-          </ScrollLink>
+          </ScrollLink>*/}
           <ScrollLink
             className="px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="rules"
@@ -116,7 +116,7 @@ const Navbar = () => {
           >
             Timeline
           </ScrollLink>
-          <ScrollLink
+    {/*<ScrollLink
             className="px-4 py-2 rounded-full hover:bg-white hover:text-black transition-all cursor-pointer"
             to="about"
             smooth={true}
@@ -124,7 +124,7 @@ const Navbar = () => {
             onClick={toggleSidebar}
           >
             About Us
-          </ScrollLink>
+          </ScrollLink>*/}
         </div>
       </div>
     </nav>
