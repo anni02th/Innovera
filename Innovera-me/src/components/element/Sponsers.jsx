@@ -15,7 +15,7 @@ const sponsors = [
 const SponsorsSection = () => {
   return (
     <div className="bg-black text-white py-12 px-12"
-    style={{ backgroundImage: "url('/bg-img.png')" }}
+     
     >
       <h2 className="text-3xl font-bold text-center mb-8">SPONSERS</h2>
       <div className="flex flex-wrap justify-center gap-8 px-4">

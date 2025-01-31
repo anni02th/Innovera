@@ -46,8 +46,9 @@ Fun and Collaboration`,
 
   return (
     <div
-      className="bg-black py-16 px-8 min-h-screen bg-cover bg-center flex flex-col items-center"
+      className="bg-black py-16 px-8 min-h-screen bg-cover flex flex-col items-center"
       style={{ backgroundImage: "url('/bg-img.png')" }}
+      id="about"
     >
       <h2 className="text-center text-white text-3xl sm:text-5xl font-bold mb-14">
         ABOUT INNOV-ERA
@@ -75,7 +76,7 @@ Fun and Collaboration`,
               {item.description}
             </p>
             {item.button && (
-              <div className="text-center z-10">
+              <div className="text-center z-100">
                 <a href="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664">
                 <button className="bg-white mt-12 text-black font-medium border px-5 py-2 rounded-3xl hover:bg-gray-200 transition">
                   Register

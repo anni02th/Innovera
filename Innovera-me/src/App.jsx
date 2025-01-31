@@ -3,11 +3,10 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import About from './components/About';
-import Themes from "./components/Themes.jsx";
-import Organiser from "./components/Organiser.jsx"
-import Rules from "./components/Rules.jsx";
-import Timeline from './components/Timeline.jsx';
+import About from './components/element/About.jsx';
+import Organiser from "./components/element/Organiser.jsx"
+import Timeline from './components/element/Timeline.jsx';
+import Rules from './components/element/Rules.jsx';
 
 function App() {
   return (
@@ -16,7 +15,6 @@ function App() {
       {/* Define Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/themes" element={<Themes />} />
         <Route path="/organiser" element={<Organiser />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/timeline" element={<Timeline />} />

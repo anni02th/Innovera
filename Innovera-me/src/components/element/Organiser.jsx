@@ -6,7 +6,7 @@ const teamData = [
     name: "Shivraj Talekar",
     team: "Marketing & Secretariat",
     role: "Head",
-    image: "/images/shivraj.jpg",
+    image: "https://dummyimage.com/192x192/000/fff.png&text=Shivraj",
     socials: ["facebook", "instagram", "linkedin"]
   },
   {
@@ -76,7 +76,7 @@ const iconMap = {
 const OrganizingTeam = () => {
   return (
     <div className="bg-black text-white py-12 px-4"
-    style={{ backgroundImage: "url('/bg-img.png')" }}
+     
     >
       <h2 className="text-3xl font-bold text-center mb-8">ORGANIZING TEAM</h2>
       <div className="container mx-auto grid gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 px-4">

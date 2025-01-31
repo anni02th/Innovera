@@ -4,8 +4,8 @@ import { Link as ScrollLink } from "react-scroll";
 const Hero = () => {
   return (
     <div
-      className="bg-black text-white py-16 px-8 flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: "url('/bg-img.png')" }}>
+      className="bg-black text-white py-16 px-8 flex flex-col items-center justify-center min-h-screen bg-cover"
+      style={{ backgroundImage: "url('/bg-img.png')" }} >
       <div className="text-center flex flex-col items-center z-10">
         <img src="/main-img.png" alt="Moscot" width={400}/>
         <h1 className="text-4xl sm:text-8xl font-bold mb-6">INNOV-ERA</h1>

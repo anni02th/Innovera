@@ -47,7 +47,7 @@ const ThemesSection = () => {
 
   return (
     <div
-      className="min-h-screen bg-black bg-cover bg-center p-4 md:p-8"
+      className="min-h-screen bg-black bg-cover p-4 md:p-8"
       style={{ backgroundImage: "url('/bg-img.png')" }}
       id="themes"
     >
@@ -124,7 +124,7 @@ const ThemesSection = () => {
                       alt={theme.title}
                       className={`transition-all duration-500 ${
                         expandedIndex === index
-                          ? "animate-spin-slow w-full"
+                          ? "w-full"
                           : "w-24 md:w-32"
                       }`}
                     />
