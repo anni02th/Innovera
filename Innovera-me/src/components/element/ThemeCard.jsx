@@ -4,39 +4,135 @@ const themes = [
   {
     title: "Aero: EdTech",
     gradient: "bg-gradient-to-r from-[#B2F4FF] to-[#52BCCE]",
-    image: "/wind.png", 
-    description: "Focus: Innovating education technology to shape better learning experiences.",
-    additionalContent: "Key areas: Personalized learning platforms, Gamification of education, Virtual classrooms and collaborative tools, Tools for special education and inclusivity, AI tutors and content recommendation systems, Platforms for skill development and certifications",
+    image: "/wind.png",
+    description: "Innovating education technology to shape better learning experiences.",
+    additionalContent: (
+      <>
+        <p>
+          <b>Personalized learning platforms and Gamification of education:</b> Tailored learning experiences to individual needs and preferences, making education more engaging and effective.
+        </p>
+        <p>
+          <b>Virtual classrooms and collaborative tools:</b> Remote learning environments that foster interaction and teamwork.
+        </p>
+        <p>
+          <b>Tools for special education and inclusivity:</b> Technologies that support learners with diverse needs, ensuring equal access to quality education.
+        </p>
+        <p>
+          <b>AI tutors and content recommendation systems:</b> Intelligent tools that provide personalized guidance and resources, enhancing the learning process.
+        </p>
+        <p>
+          <b>Platforms for skill development and certifications:</b> Online platforms for acquiring new skills and earning credentials, boosting employability and career advancement.
+        </p>
+        <p>EdTech enhances access to quality education, fosters inclusivity, reduces inequalities, and empowers learners of all genders, driving progress toward the Sustainable Development Goals (SDGs Goal 4, 5, 10).</p>
+      </>
+    ),
   },
   {
     title: "Terra: Green Tech",
     gradient: "bg-gradient-to-r from-[#B7E4C7] to-[#81B499]",
-    image: "/ground.png", 
-    description: "Focus: Designing sustainable solutions to protect and heal our planet.",
-    additionalContent: "Key areas:Renewable energy solutions (solar, wind, etc.), Waste management and recycling innovations, Smart agriculture and water management, Carbon footprint reduction technologies, Eco-friendly transportation systems",
+    image: "/ground.png",
+    description: "Designing sustainable solutions to protect and heal our planet.",
+    additionalContent: (
+      <>
+        <p>
+          <b>Renewable energy solutions (solar, wind, etc.):</b> Technologies that harness clean energy sources to reduce reliance on fossil fuels and mitigate climate change.
+        </p>
+        <p>
+          <b>Solid and E-waste management and recycling innovations:</b> Efficient systems for managing and repurposing waste, minimizing environmental impact.
+        </p>
+        <p>
+          <b>Smart agriculture and water management:</b> Sustainable practices that optimize resource use in agriculture, ensuring food security while protecting the environment.
+        </p>
+        <p>
+          <b>Eco-friendly transportation systems:</b> Innovative transportation solutions that reduce emissions and promote sustainable mobility.
+        </p>
+         <p>
+          <b>Green building and sustainable construction practices:</b> Environmentally conscious building design and construction methods that minimize resource consumption and environmental impact.
+        </p>
+        <p>Green technologies drive climate action, promote clean energy, foster responsible consumption, and safeguard ecosystems, advancing the Sustainable Development Goals (SDGs Goal 7, 11, 12, 13, 15).</p>
+      </>
+    ),
   },
   {
     title: "Hydra: FinTech",
     gradient: "bg-gradient-to-r from-[#A3DFFF] to-[#2B7BCD]",
-    image: "/water.png", 
-    description: "Focus: Revolutionizing financial systems with smarter, safer and more accessible solutions.",
-    additionalContent: "Key areas:Digital payments and wallets, Blockchain and cryptocurrency innovations, Fraud detection and prevention systems, Investment and wealth management platforms, Financial inclusion and accessibility tools, Banking automation using AI/ML.",
+    image: "/water.png",
+    description: "Revolutionizing financial systems with smarter, safer, and more accessible solutions.",
+    additionalContent: (
+      <>
+        <p>
+          <b>Digital payments and wallets:</b> Secure and convenient electronic payment methods that streamline transactions and enhance financial inclusion.
+        </p>
+        <p>
+          <b>Blockchain and cryptocurrency innovations:</b> Decentralized technologies that enable secure and transparent financial transactions, potentially transforming the financial landscape.
+        </p>
+        <p>
+          <b>Fraud detection and prevention systems:</b> Advanced technologies that detect and prevent fraudulent financial activities, ensuring the integrity of financial systems.
+        </p>
+        <p>
+          <b>Financial inclusion and accessibility tools:</b> Solutions that provide financial services to underserved populations, promoting economic empowerment and reducing inequality.
+        </p>
+        <p>
+          <b>Banking automation using AI/ML:</b> Artificial intelligence and machine learning applications that automate banking processes, improving efficiency and customer experience.
+        </p>
+        <p>FinTech accelerates financial inclusion, fosters economic growth, reduces poverty, and bridges inequality gaps, aligning with the Sustainable Development Goals (SDGs Goal 1, 8, 9, 10)</p>
+      </>
+    ),
   },
   {
     title: "Ether: Cyber",
     gradient: "bg-gradient-to-r from-[#A3B9F3] to-[#5A83F1]",
-    image: "/space.png", 
-    description: "Focus: Tackling cybersecurity threats to safeguard the digital realm.",
-    additionalContent: "Key areas:Cyber threat detection and mitigation tools, Data encryption and secure communication, Identity and access management solutions, Network security innovations, Cloud security enhancements, Ethical hacking and penetration testing",
+    image: "/space.png",
+    description: "Managing cybersecurity threats to safeguard the digital realm.",
+    additionalContent: (
+      <>
+        <p>
+          <b>Cyber threat detection and mitigation tools:</b> Technologies that identify and respond to cyberattacks, protecting digital assets and infrastructure.
+        </p>
+        <p>
+          <b>Data encryption and secure communication:</b> Methods for securing data transmission and storage, ensuring confidentiality and integrity.
+        </p>
+        <p>
+          <b>Identity and access management solutions:</b> Systems that control user access to digital resources, preventing unauthorized access and data breaches.
+        </p>
+        <p>
+          <b>Cloud and Network security enhancements:</b> Security measures that protect cloud-based and network-connected systems from cyber threats.
+        </p>
+        <p>
+          <b>Ethical hacking and penetration testing:</b> Authorized security assessments that identify vulnerabilities in systems and networks, enabling proactive remediation.
+        </p>
+        <p>Cybersecurity protects networks, data, and systems through encryption, threat detection, and risk management while ensuring compliance and user awareness,driving progress toward the Sustainable Development Goals (SDGs 4, 9, 11, 16).</p>
+      </>
+    ),
   },
   {
     title: "Ignis: Next Gen",
     gradient: "bg-gradient-to-r from-[#FFD7B5] to-[#EAAC76]",
-    image: "/fire.png", 
-    description: "Focus: Creating futuristic tech that transforms how we live, work, and play.",
-    additionalContent: "Key areas:Artificial Intelligence and Machine Learning applications, Internet of Things (IoT) for smart living, Augmented Reality (AR) and Virtual Reality (VR) experiences, Robotics and automation, 5G and connectivity advancements",
+    image: "/fire.png",
+    description: "Creating futuristic tech that transforms how we live, work, and play.",
+    additionalContent: (
+      <>
+        <p>
+          <b>Artificial Intelligence, Machine Learning and Deep Learning:</b> Technologies that enable machines to learn from data, automate tasks, and make intelligent decisions.
+        </p>
+        <p>
+          <b>Augmented Reality (AR) and Virtual Reality (VR) experiences:</b> Immersive technologies that blend the real and virtual worlds, creating engaging and interactive experiences.
+        </p>
+        <p>
+          <b>Internet of Things (IoT), Robotics and automation:</b> Connected devices and automated systems that enhance efficiency, productivity, and convenience.
+        </p>
+        <p>
+          <b>Quantum Computing:</b> A revolutionary computing paradigm that has the potential to solve complex problems beyond the reach of classical computers.
+        </p>
+        <p>
+          <b>5G and connectivity advancements:</b> High-speed wireless technologies that enable faster data transfer, seamless communication, and new applications.
+        </p>
+        <p>Next-gen technologies fuel innovation, enhance quality education, promote sustainable consumption, and empower future leaders, driving progress toward the Sustainable Development Goals (SDGs Goal 4, 8, 9, 12).</p>
+      </>
+    ),
   },
 ];
+
 
 const ThemesSection = () => {
   const [expandedIndex, setExpandedIndex] = useState(null);
@@ -62,7 +158,7 @@ const ThemesSection = () => {
               key={index}
               className={`transition-all duration-500 ease-in-out ${
                 expandedIndex === index
-                  ? "col-span-1 md:col-span-2 lg:col-span-3 h-[500px] md:h-[400px]"
+                  ? "col-span-1 md:col-span-2 lg:col-span-3 h-[500px] md:h-fit"
                   : "h-[250px]"
               }`}
             >

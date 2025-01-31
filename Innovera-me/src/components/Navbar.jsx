@@ -40,42 +40,44 @@ const DesktopMenu = ({ scrolled }) => (
     ))}
   </div>
 );
-
-// Mobile Menu Component
+// Mobile Menu Component - Updated
 const MobileMenu = ({ isOpen, onClose }) => (
   <div
-    className={`fixed top-0 left-0 w-3/4 h-full bg-black text-white shadow-lg z-50 md:hidden transform transition-transform duration-300 ${
+    className={`fixed top-16 left-0 w-full h-[calc(100vh-4rem)] bg-black/95 text-white shadow-lg z-[60] md:hidden transform transition-transform duration-300 ${
       isOpen ? "translate-x-0" : "-translate-x-full"
     }`}
   >
-    <div className="flex h-16 justify-between items-center px-4 py-3 border-b border-white/20">
-      <div className="text-lg font-bold">Menu</div>
-      <button className="text-white text-2xl" onClick={onClose}>
-        <FaTimes />
-      </button>
-    </div>
-    <div className="flex-1 flex bg-black flex-col justify-center gap-4 px-4">
-      {navItems.map((item) => (
-        <NavLink
-          key={item.to}
-          to={item.to}
-          className="hover:bg-gray-700 hover:text-white"
+    <div className="flex flex-col h-full">
+      <div className="flex justify-end p-4">
+        <button 
+          className="text-white text-2xl hover:text-gray-300 transition-colors"
           onClick={onClose}
         >
-          {item.name}
-        </NavLink>
-      ))}
-      <Link
-        to="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664"
-        className="bg-gray-800 text-white hover:bg-gray-600 text-center"
-        onClick={onClose}
-      >
-        Register
-      </Link>
+          <FaTimes />
+        </button>
+      </div>
+      <div className="flex-1 flex flex-col items-center gap-6 px-4">
+        {navItems.map((item) => (
+          <NavLink
+            key={item.to}
+            to={item.to}
+            className="text-2xl hover:text-gray-300 transition-colors"
+            onClick={onClose}
+          >
+            {item.name}
+          </NavLink>
+        ))}
+        <Link
+          to="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664"
+          className="text-2xl px-8 py-3 w-40 bg-white/10 hover:bg-white/20 rounded-full transition-colors"
+          onClick={onClose}
+        >
+          Register
+        </Link>
+      </div>
     </div>
   </div>
 );
-
 // Navbar Component
 const Navbar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
