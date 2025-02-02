@@ -45,7 +45,6 @@ const RuleCard = ({ title, content, theme }) => {
     </div>
   );
 };
-
 const Rules = () => {
   return (
     <div
@@ -63,9 +62,10 @@ const Rules = () => {
             content={
               <>
                 <p>&bull; Teams are required to submit a PPT using the provided template.</p>
-                <p>&bull; The presentation should clearly articulate the idea, the problem and potential solutions.</p>
+                <p>&bull; The presentation should clearly articulate the idea, the problem, and potential solutions.</p>
               </>
-            } theme="orange"
+            }
+            theme="orange"
           />
           <RuleCard
             title="Phase 2 Prakalp (Online): Prototype Submission"
@@ -74,7 +74,8 @@ const Rules = () => {
                 <p>&bull; Shortlisted teams will develop a prototype based on their idea.</p>
                 <p>&bull; Submit a 3–5-minute video demonstrating the prototype's functionality and key features.</p>
               </>
-            } theme="blue"
+            }
+            theme="blue"
           />
           <RuleCard
             title="Phase 3 Utkarsh: Grand Finale"
@@ -83,7 +84,8 @@ const Rules = () => {
                 <p>&bull; The Grand Finale will be a 12-hour offline hackathon held at the event venue.</p>
                 <p>&bull; Teams will refine, enhance, and finalize their prototypes within the given time.</p>
               </>
-            } theme="orange"
+            }
+            theme="orange"
           />
           <RuleCard
             title="Team Composition"
@@ -92,9 +94,9 @@ const Rules = () => {
                 <p>&bull; Teams should consist of 4-6 members with at least one female member.</p>
                 <p>&bull; A blend of diverse skills and perspectives fuels groundbreaking innovation.</p>
               </>
-            } theme="blue"
+            }
+            theme="blue"
           />
-          
         </div>
       </div>
     </div>

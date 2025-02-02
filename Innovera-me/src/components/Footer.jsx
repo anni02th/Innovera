@@ -175,7 +175,7 @@ const Footer = () => {
         {/* Social Media Icons */}
         <div className="flex gap-6 text-neutral-400 my-8 justify-center">
           <a
-            href="https://www.linkedin.com"
+            href="https://in.linkedin.com/company/innov-era-hackathon"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors"
