@@ -1,41 +1,32 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // AOS styles
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-const RuleCard = ({ title, content, theme }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const cardRef = useRef(null);
-
-  useEffect(() => {
-    if (cardRef.current) {
-      cardRef.current.style.transform = isHovered
-        ? "translateY(-10px) scale(1.05)"
-        : "translateY(0) scale(1)";
-    }
-  }, [isHovered]);
-
+const RuleCard = ({ title, content, theme, isTop }) => {
   const styles = {
     borderColor: theme === "blue" ? "#1e90ff" : "#FF6C40",
-    boxShadow: isHovered
+    boxShadow: isTop
       ? theme === "blue"
         ? "0 0 20px 10px rgba(30, 144, 255, 0.8)"
         : "0 0 20px 10px rgba(255, 165, 0, 0.8)"
       : "none",
+    transform: isTop ? "rotate(0deg)" : "rotate(-5deg)",
   };
 
-  // Define images based on theme
   const images = {
-    blue: "/rnr-b-fire.png", // Replace with your blue image path
-    orange: "/rnr-fire.png", // Replace with your orange image path
+    blue: "/rnr-b-fire.png",
+    orange: "/rnr-fire.png",
   };
 
   return (
     <div
-      ref={cardRef}
-      className={`rounded-[2rem] overflow-hidden transition-all duration-300 ease-out cursor-pointer border-4`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className={`rounded-[2rem] overflow-hidden transition-all duration-300 ease-out cursor-pointer border-4 hover:scale-105 hover:shadow-lg ${
+        isTop ? "scale-100 opacity-100" : "scale-90 opacity-70"
+      }`}
       style={styles}
     >
-      <div className="bg-black flex m-0 p-0 rounded-xl h-full -left-1 relative">
+      <div className="bg-black flex m-0 p-0 rounded-xl h-full -left-1 relative transform transition-all duration-300">
         <img src={images[theme]} alt={`${theme} Fire`} className="relative" />
         <div className="my-2">
           <h3 className="text-xl font-bold mb-4 text-white">{title}</h3>
@@ -45,7 +36,69 @@ const RuleCard = ({ title, content, theme }) => {
     </div>
   );
 };
+
 const Rules = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const cards = [
+    {
+      title: "Phase 1 Sankalp (Online): Idea Submission",
+      content: (
+        <>
+          <p>&bull; Teams are required to submit a PPT using the provided template.</p>
+          <p>&bull; The presentation should clearly articulate the idea, the problem, and potential solutions.</p>
+        </>
+      ),
+      theme: "orange",
+    },
+    {
+      title: "Phase 2 Prakalp (Online): Prototype Submission",
+      content: (
+        <>
+          <p>&bull; Shortlisted teams will develop a prototype based on their idea.</p>
+          <p>&bull; Submit a 3–5-minute video demonstrating the prototype's functionality and key features.</p>
+        </>
+      ),
+      theme: "blue",
+    },
+    {
+      title: "Phase 3 Utkarsh: Grand Finale",
+      content: (
+        <>
+          <p>&bull; The Grand Finale will be a 12-hour offline hackathon held at the event venue.</p>
+          <p>&bull; Teams will refine, enhance, and finalize their prototypes within the given time.</p>
+        </>
+      ),
+      theme: "orange",
+    },
+    {
+      title: "Team Composition",
+      content: (
+        <>
+          <p>&bull; Teams should consist of 4-6 members with at least one female member.</p>
+          <p>&bull; A blend of diverse skills and perspectives fuels groundbreaking innovation.</p>
+        </>
+      ),
+      theme: "blue",
+    },
+  ];
+
+  const handleNext = () => {
+    setActiveIndex((prev) => (prev + 1) % cards.length);
+  };
+
+  const handlePrev = () => {
+    setActiveIndex((prev) => (prev - 1 + cards.length) % cards.length);
+  };
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  }, []);
+
+
   return (
     <div
       className="min-h-screen bg-black text-white py-20 bg-cover bg-center"
@@ -53,50 +106,67 @@ const Rules = () => {
       style={{ backgroundImage: "url('/bg-img.png')" }}
     >
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-white">
+        <h2
+          className="text-3xl sm:text-5xl font-bold text-center mb-12 text-white"
+          data-aos="fade-down"
+          data-aos-delay="100"
+        >
           RULES AND REGULATIONS
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <RuleCard
-            title="Phase 1 Sankalp (Online): Idea Submission"
-            content={
-              <>
-                <p>&bull; Teams are required to submit a PPT using the provided template.</p>
-                <p>&bull; The presentation should clearly articulate the idea, the problem, and potential solutions.</p>
-              </>
-            }
-            theme="orange"
-          />
-          <RuleCard
-            title="Phase 2 Prakalp (Online): Prototype Submission"
-            content={
-              <>
-                <p>&bull; Shortlisted teams will develop a prototype based on their idea.</p>
-                <p>&bull; Submit a 3–5-minute video demonstrating the prototype's functionality and key features.</p>
-              </>
-            }
-            theme="blue"
-          />
-          <RuleCard
-            title="Phase 3 Utkarsh: Grand Finale"
-            content={
-              <>
-                <p>&bull; The Grand Finale will be a 12-hour offline hackathon held at the event venue.</p>
-                <p>&bull; Teams will refine, enhance, and finalize their prototypes within the given time.</p>
-              </>
-            }
-            theme="orange"
-          />
-          <RuleCard
-            title="Team Composition"
-            content={
-              <>
-                <p>&bull; Teams should consist of 4-6 members with at least one female member.</p>
-                <p>&bull; A blend of diverse skills and perspectives fuels groundbreaking innovation.</p>
-              </>
-            }
-            theme="blue"
-          />
+
+        <div className="md:hidden relative h-[400px]">
+          {cards.map((card, index) => (
+            <div
+              key={index}
+              className={`absolute w-full transition-all duration-500 ease-in-out ${
+                index === activeIndex
+                  ? "z-20 top-0 opacity-100"
+                  : index === activeIndex - 1 || index === activeIndex + 1
+                  ? "z-10 top-8 opacity-60"
+                  : "z-0 top-12 opacity-40"
+              }`}
+              style={{
+                transform: `rotate(${
+                  index === activeIndex ? "0deg" : 
+                  index < activeIndex ? "-5deg" : "5deg"
+                }) scale(${
+                  index === activeIndex ? 1 : 
+                  index === activeIndex - 1 || index === activeIndex + 1 ? 0.9 : 0.8
+                })`,
+              }}
+            >
+              <RuleCard
+                title={card.title}
+                content={card.content}
+                theme={card.theme}
+                isTop={index === activeIndex}
+              />
+            </div>
+          ))}
+
+          <button
+            className="absolute bottom-8 left-4 transform bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition z-30"
+            onClick={handlePrev}
+          >
+            <FaAngleLeft size={24} />
+          </button>
+          <button
+            className="absolute bottom-8 right-4 transform bg-black bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition z-30"
+            onClick={handleNext}
+          >
+            <FaAngleRight size={24} />
+          </button>
+        </div>
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-2 gap-8">
+          {cards.map((card, index) => (
+            <RuleCard
+              key={index}
+              title={card.title}
+              content={card.content}
+              theme={card.theme}
+              isTop={true}
+            />
+          ))}
         </div>
       </div>
     </div>

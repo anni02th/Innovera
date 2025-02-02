@@ -65,14 +65,6 @@ export default function Timeline() {
     setLiveEventIndex(initialLiveIndex === -1 ? null : initialLiveIndex);
   }, [timelineData]);
 
-  useEffect(() => {
-    if (liveEventIndex !== null && timelineRef.current) {
-      const liveEventElement = timelineRef.current.children[liveEventIndex];
-      if (liveEventElement) {
-        liveEventElement.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-    }
-  }, [liveEventIndex]);
 
   return (
     <div
