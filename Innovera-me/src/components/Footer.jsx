@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaWhatsapp,
@@ -10,28 +9,20 @@ import {
   FaInfoCircle,
   FaListAlt,
   FaEye,
+  FaArrowRight,
+  FaLongArrowAltUp,
+  FaGofore,
+  FaSignInAlt,
 } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Footer = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
-  const [visitorCount, setVisitorCount] = useState(0);
 
-  // Load visitor count from local storage on component mount
-  useEffect(() => {
-    const count = localStorage.getItem("visitorCount");
-    if (count) {
-      setVisitorCount(parseInt(count) + 1);
-      localStorage.setItem("visitorCount", parseInt(count) + 1);
-    } else {
-      setVisitorCount(1);
-      localStorage.setItem("visitorCount", 1);
-    }
-  }, []);
 
   const whatsappLink =
-    "https://wa.me/919876543210?text=Hello%20INNOV-ERA%20Team,%20I%20would%20like%20to%20register%20for%20Techathon%20KKWIEER.";
+    "https://wa.me/919579764477?text=Hello%20INNOV-ERA%20Team,%20I%20would%20like%20to%20register%20for%20Techathon%20KKWIEER.";
 
   const legalContent = {
     terms: {
@@ -117,51 +108,56 @@ const Footer = () => {
         </section>
 
         {/* Quick Links Section */}
-        <section className="flex flex-col sm:flex-row gap-8 mt-8 sm:mt-0">
-          <div className="flex flex-col gap-3">
-            <h1 className="text-2xl text-neutral-300 font-semibold">Contact</h1>
-            <a
-              href="tel:+919876543210"
-              className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400"
-            >
-              <FaPhoneAlt /> +91 98765 43210
-            </a>
-            <a
-              href="mailto:contact@innov-era.in"
-              className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400"
-            >
-              <FaEnvelope /> contact@innov-era.in
-            </a>
-          </div>
+        <section className="flex flex-col justify-center items-center max-md:justify-start max-md:items-start">
+          <div className="flex flex-wrap gap-8 mt-8 sm:mt-0">
+            <div className="flex flex-col gap-3">
+              <h1 className="text-2xl text-neutral-300 font-semibold">Contact</h1>
+              <a
+                href="tel:+919579764477"
+                className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400"
+              >
+                <FaPhoneAlt /> +91 95797 64477
+              </a>
+              <a
+                href="mailto:contact@innov-era.in"
+                className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400"
+              >
+                <FaEnvelope /> contact@innov-era.in
+              </a>
+            </div>
 
-          <div className="flex flex-col gap-3">
-            <h1 className="text-2xl text-neutral-300 font-semibold">Quick Links</h1>
-            <Link to="home" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
-              <FaHome /> Home
-            </Link>
-            <Link to="about" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
-              <FaInfoCircle /> About
-            </Link>
-            <Link to="timeline" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
-              <FaListAlt /> Timeline
-            </Link>
-          </div>
+            <div className="flex flex-col gap-3">
+              <h1 className="text-2xl text-neutral-300 font-semibold">Quick Links</h1>
+              <Link to="home" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
+                <FaHome /> Home
+              </Link>
+              <Link to="about" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
+                <FaInfoCircle /> About
+              </Link>
+              <Link to="timeline" smooth={true} duration={500} className="text-neutral-400 inline-flex items-center gap-2 hover:text-orange-400 cursor-pointer">
+                <FaListAlt /> Timeline
+              </Link>
+            </div>
 
-          <div className="flex flex-col gap-3">
-            <h1 className="text-2xl text-neutral-300 font-semibold">Legal</h1>
-            <p onClick={() => openModal("terms")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
-              Terms & Conditions
-            </p>
-            <p onClick={() => openModal("privacy")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
-              Privacy & Policy
-            </p>
-            <p onClick={() => openModal("disclaimer")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
-              Disclaimer
-            </p>
+            <div className="flex flex-col gap-3">
+              <h1 className="text-2xl text-neutral-300 font-semibold">Legal</h1>
+              <p onClick={() => openModal("terms")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
+                Terms & Conditions
+              </p>
+              <p onClick={() => openModal("privacy")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
+                Privacy & Policy
+              </p>
+              <p onClick={() => openModal("disclaimer")} className="text-neutral-400 hover:text-orange-400 cursor-pointer">
+                Disclaimer
+              </p>
+            </div>
+          </div>
+          <div>
+          <img src="/unstop.png" alt="" className="inline-flex" width={240} />
           </div>
         </section>
       </div>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-20 my-8">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-0 md:gap-20 my-8">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 my-8">
           <div className="flex items-center gap-4">
             <a
@@ -187,28 +183,21 @@ const Footer = () => {
             <FaLinkedin size={36} />
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/innovera_techathon"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-orange-400 transition-colors"
           >
             <FaInstagram size={36} />
           </a>
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-orange-400 transition-colors"
-          >
-            <FaFacebook size={36} />
+         
+        </div>
+        <div>
+        <a href ="https://unstop.com/p/innov-era-national-level-hackathon-kkwagh-college-of-engineering-and-researchnashik-1374664" className=" text-neutral-400 hover:text-orange-400 transition-colors z-10 inline-flex justify-center items-center gap-2 text-lg">
+           <FaSignInAlt/> Register
           </a>
         </div>
-
-        {/* Visitor Count */}
-        <div className="flex justify-center items-center gap-2 text-neutral-400">
-          <FaEye size={24} />
-          <p>Visitor Count: {visitorCount}</p>
-        </div>
+        
       </div>
 
       {/* Legal Modal */}

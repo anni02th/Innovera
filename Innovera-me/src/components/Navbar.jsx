@@ -104,7 +104,7 @@ const Navbar = () => {
       <section className="flex items-center justify-between px-4 md:px-10 h-full">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold cursor-pointer">
-          Innovera  
+          <pre>Innov-era</pre>  
         </Link>
 
         {/* Mobile Menu Button */}

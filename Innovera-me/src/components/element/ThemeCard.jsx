@@ -22,7 +22,7 @@ const themes = [
         </p>
         <p>
           <b>Platforms for skill development and certifications:</b> Online platforms for acquiring new skills and earning credentials, boosting employability and career advancement.
-        </p>
+        </p> <br />
         <p>EdTech enhances access to quality education, fosters inclusivity, reduces inequalities, and empowers learners of all genders, driving progress toward the Sustainable Development Goals (SDGs Goal 4, 5, 10).</p>
       </>
     ),
@@ -48,7 +48,7 @@ const themes = [
         </p>
          <p>
           <b>Green building and sustainable construction practices:</b> Environmentally conscious building design and construction methods that minimize resource consumption and environmental impact.
-        </p>
+        </p> <br />
         <p>Green technologies drive climate action, promote clean energy, foster responsible consumption, and safeguard ecosystems, advancing the Sustainable Development Goals (SDGs Goal 7, 11, 12, 13, 15).</p>
       </>
     ),
@@ -74,7 +74,7 @@ const themes = [
         </p>
         <p>
           <b>Banking automation using AI/ML:</b> Artificial intelligence and machine learning applications that automate banking processes, improving efficiency and customer experience.
-        </p>
+        </p> <br />
         <p>FinTech accelerates financial inclusion, fosters economic growth, reduces poverty, and bridges inequality gaps, aligning with the Sustainable Development Goals (SDGs Goal 1, 8, 9, 10)</p>
       </>
     ),
@@ -100,7 +100,7 @@ const themes = [
         </p>
         <p>
           <b>Ethical hacking and penetration testing:</b> Authorized security assessments that identify vulnerabilities in systems and networks, enabling proactive remediation.
-        </p>
+        </p> <br />
         <p>Cybersecurity protects networks, data, and systems through encryption, threat detection, and risk management while ensuring compliance and user awareness,driving progress toward the Sustainable Development Goals (SDGs 4, 9, 11, 16).</p>
       </>
     ),
@@ -126,7 +126,7 @@ const themes = [
         </p>
         <p>
           <b>5G and connectivity advancements:</b> High-speed wireless technologies that enable faster data transfer, seamless communication, and new applications.
-        </p>
+        </p> <br />
         <p>Next-gen technologies fuel innovation, enhance quality education, promote sustainable consumption, and empower future leaders, driving progress toward the Sustainable Development Goals (SDGs Goal 4, 8, 9, 12).</p>
       </>
     ),
@@ -164,7 +164,7 @@ const ThemesSection = () => {
             >
               <div
                 onClick={() => toggleCard(index)}
-                className={`${theme.gradient} rounded-2xl p-6 h-full w-full cursor-pointer 
+                className={`${theme.gradient} rounded-2xl p-6 h-full w-full cursor-pointer max-md:overflow-y-scroll
                   transition-all duration-500 ease-in-out relative overflow-hidden
                   ${
                     expandedIndex === index

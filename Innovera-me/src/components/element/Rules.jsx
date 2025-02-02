@@ -59,40 +59,42 @@ const Rules = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <RuleCard
-            title="Selection Process"
-   content={
-    <>
-      <p>Round 1 (Online): Top 25 teams per theme are selected based on a 5-slide PPT submission.</p>
-      <p>Round 2 (Online): Top 5 teams per theme qualify after submitting a prototype video.</p>
-      <p>Round 3 (Offline): Finalists participate in an offline 12-hour hackathon.</p>
-    </>
-  }            theme="orange"
+            title="Phase 1 Sankalp (Online): Idea Submission"
+            content={
+              <>
+                <p>&bull; Teams are required to submit a PPT using the provided template.</p>
+                <p>&bull; The presentation should clearly articulate the idea, the problem and potential solutions.</p>
+              </>
+            } theme="orange"
           />
           <RuleCard
-            title="National Platform"
-            content="This national-level hackathon serves as a prestigious platform where the brightest minds come together to showcase their skills and shine among the best in the country."
-            theme="blue"
+            title="Phase 2 Prakalp (Online): Prototype Submission"
+            content={
+              <>
+                <p>&bull; Shortlisted teams will develop a prototype based on their idea.</p>
+                <p>&bull; Submit a 3–5-minute video demonstrating the prototype's functionality and key features.</p>
+              </>
+            } theme="blue"
           />
           <RuleCard
-            title="Time Constraint"
-            content="Participants will have 12 hours to develop their solutions. This time pressure is designed to simulate real-world scenarios and push creativity to its limits."
-            theme="orange"
+            title="Phase 3 Utkarsh: Grand Finale"
+            content={
+              <>
+                <p>&bull; The Grand Finale will be a 12-hour offline hackathon held at the event venue.</p>
+                <p>&bull; Teams will refine, enhance, and finalize their prototypes within the given time.</p>
+              </>
+            } theme="orange"
           />
           <RuleCard
             title="Team Composition"
-            content="Teams can consist of 4-6 members(1 female-member compulsory). Diversity in skills and backgrounds is encouraged to foster innovative solutions."
-            theme="blue"
+            content={
+              <>
+                <p>&bull; Teams should consist of 4-6 members with at least one female member.</p>
+                <p>&bull; A blend of diverse skills and perspectives fuels groundbreaking innovation.</p>
+              </>
+            } theme="blue"
           />
-          <RuleCard
-            title="Judging Criteria"
-            content="Projects will be judged on innovation, feasibility, technical complexity, and potential impact. A panel of industry experts will evaluate each submission."
-            theme="orange"
-          />
-          <RuleCard
-            title="Code of Conduct"
-            content="All participants are expected to adhere to a strict code of conduct, promoting respect, inclusivity and ethical behavior throughout the event."
-            theme="blue"
-          />
+          
         </div>
       </div>
     </div>
