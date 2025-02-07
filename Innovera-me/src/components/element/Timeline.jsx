@@ -47,7 +47,7 @@ const TimelineEvent = ({ event, status, index, ref, isEven }) => {
 
 export default function Timeline() {
   const timelineEvents = [
-    { number: "01", title: "Registration Window", description: "Secure your spot and showcase your skills", status: "past", date: "27 Jan - 10 Feb 2025" },
+    { number: "01", title: "Registration Window", description: "Secure your spot and showcase your skills", status: "past", date: "27 Jan - 7 Feb 2025" },
     { number: "02", title: "Submission Window", description: "Submit your PPT to showcase your creativity and innovative ideas!", status: "live", date: "5 Feb - 12 Feb 2025" },
     { number: "03", title: "Results Round 1", description: "Results for the first phase will be announced.", status: "upcoming", date: "16 Feb 2025" },
     { number: "04", title: "Submission for Phase 2", description: "Submit your video showcasing your prototype", status: "upcoming", date: "19 Feb - 20 Feb 2025" },

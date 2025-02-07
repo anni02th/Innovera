@@ -21,9 +21,8 @@ const RuleCard = ({ title, content, theme, isTop }) => {
 
   return (
     <div
-      className={`rounded-[2rem] overflow-hidden transition-all duration-300 ease-out cursor-pointer border-4 hover:scale-105 hover:shadow-lg ${
-        isTop ? "scale-100 opacity-100" : "scale-90 opacity-70"
-      }`}
+      className={`rounded-[2rem] overflow-hidden transition-all duration-300 ease-out cursor-pointer border-4 hover:scale-105 hover:shadow-lg ${isTop ? "scale-100 opacity-100" : "scale-90 opacity-70"
+        }`}
       style={styles}
     >
       <div className="bg-black flex m-0 p-0 rounded-xl h-full -left-1 relative transform transition-all duration-300">
@@ -118,21 +117,18 @@ const Rules = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`absolute w-full transition-all duration-500 ease-in-out ${
-                index === activeIndex
-                  ? "z-20 top-0 opacity-100"
-                  : index === activeIndex - 1 || index === activeIndex + 1
+              className={`absolute w-full transition-all duration-500 ease-in-out ${index === activeIndex
+                ? "z-20 top-0 opacity-100"
+                : index === activeIndex - 1 || index === activeIndex + 1
                   ? "z-10 top-8 opacity-60"
                   : "z-0 top-12 opacity-40"
-              }`}
+                }`}
               style={{
-                transform: `rotate(${
-                  index === activeIndex ? "0deg" : 
+                transform: `rotate(${index === activeIndex ? "0deg" :
                   index < activeIndex ? "-5deg" : "5deg"
-                }) scale(${
-                  index === activeIndex ? 1 : 
-                  index === activeIndex - 1 || index === activeIndex + 1 ? 0.9 : 0.8
-                })`,
+                  }) scale(${index === activeIndex ? 1 :
+                    index === activeIndex - 1 || index === activeIndex + 1 ? 0.9 : 0.8
+                  })`,
               }}
             >
               <RuleCard
@@ -167,6 +163,15 @@ const Rules = () => {
               isTop={true}
             />
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center gap-4">
+          <button onClick={() => window.open("/Idea ppt template.pptx", "_blank")} className="bg-white text-black font-medium px-6 py-2 rounded-full border border-white hover:text-white transition z-10 hover:bg-black">
+            Download PPT
+          </button>
+          <button onClick={() => window.open("/Guidelines for Innov-Era 2025.pdf", "_blank")} className="bg-black border border-white text-white font-medium px-6 py-2 rounded-full hover:bg-zinc-900 transition ">
+            Guidelines
+          </button>
         </div>
       </div>
     </div>

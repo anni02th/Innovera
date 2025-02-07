@@ -152,7 +152,7 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="flex items-center flex-col" >
+          <div className="flex items-center flex-col max-md:items-start" >
           <img src="/unstop.png" alt="" width={240} />
           <p className="text-white/80">Powered By</p>
           </div>
