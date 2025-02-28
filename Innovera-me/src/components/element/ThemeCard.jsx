@@ -80,7 +80,7 @@ const themes = [
     ),
   },
   {
-    title: "Ether: Cyber",
+    title: "Aether: Cyber",
     gradient: "bg-gradient-to-r from-[#A3B9F3] to-[#5A83F1]",
     image: "/space.png",
     description: "Managing cybersecurity threats to safeguard the digital realm.",
