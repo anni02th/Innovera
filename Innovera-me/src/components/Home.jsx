@@ -6,6 +6,7 @@ import Timeline from './element/Timeline';
 import ThemeCard from './element/ThemeCard';
 import OrganizingTeam from './element/Organiser';
 import SponsersSection from './element/Sponsers';
+import Navbar from './Navbar';
 
 const Home = () => {
   const [showPopup, setShowPopup] = useState(true);
@@ -23,9 +24,11 @@ const Home = () => {
 
     return () => clearTimeout(timer); // Cleanup on component unmount
   }, []);
+  
 
   return (
     <div>
+      <Navbar/>
       {/* Popup */}
       {showPopup && (
         <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50 overflow-y-auto h-screen">

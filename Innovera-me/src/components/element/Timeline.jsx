@@ -81,14 +81,14 @@ export default function Timeline() {
       number: '05',
       title: 'Round 2 Result Announcement',
       description: 'Finalists announced.',
-      status: 'live',
+      status: 'past',
       date: '22 Feb 2025',
     },
     {
       number: '06',
       title: 'Grand Finale',
       description: 'Compete in the grand finale.',
-      status: 'upcoming',
+      status: 'past',
       date: '2 March 2025',
     },
   ];

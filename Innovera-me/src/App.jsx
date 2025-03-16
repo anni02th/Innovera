@@ -13,15 +13,15 @@ import IntroAnimation from './components/element/IntroAnimation.jsx';
 function App() {
   return (
     <Router>
-      <Navbar/>
+      
       {/* Define Routes */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/qr" element={<IntroAnimation />} />
-        <Route path="/organiser" element={<Organiser />} />
         <Route path="/rules" element={<Rules />} />
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/about" element={<About/>} />
+        <Route path="/organiser" element={<Organiser />} />
       </Routes>
       <Footer/>
     </Router>

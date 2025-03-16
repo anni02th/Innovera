@@ -1,4 +1,5 @@
 import React from "react";
+import WinnersCarousel from "./Winners";
 
 const AboutInnovEra = () => {
   const aboutCards = [
@@ -34,9 +35,10 @@ const AboutInnovEra = () => {
   ];
 
   const sponsors = [
+    { img: "/spo4.png", name: "Triarq Health" },
+    { img: "/spo5.png", name: "Aress." },
     { img: "/spo1.jpg", name: "The Parnika : A Small Leaf" },
     { img: "/spo3.jpg", name: "WePlus Consultancy Pvt. Ltd." },
-    { img: "/spo4.png", name: "Triarq Health" },
     { text: "Prashant Bhende", name: "Alumni (2016 batch)" },
   ];
 
@@ -81,7 +83,7 @@ const AboutInnovEra = () => {
   const SponsorCard = ({ sponsor, index }) => (
     <div
       key={index}
-      className="p-6 rounded-lg shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-white bg-gray-900 text-white flex flex-col items-center"
+      className="p-6 rounded-lg w-[320px] shadow-lg transition-transform duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-white bg-gray-900 text-white flex flex-col items-center"
     >
       {sponsor.img ? (
         <img
@@ -115,9 +117,11 @@ const AboutInnovEra = () => {
         </div>
       </div>
 
+      <WinnersCarousel/>
+
       <div className="mt-16 w-full max-w-5xl">
         <SectionTitle>OUR SPONSORS</SectionTitle>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="flex gap-8 flex-wrap justify-center wi">
           {sortedSponsors.map((sponsor, index) => (
             <SponsorCard key={index} sponsor={sponsor} index={index} />
           ))}
